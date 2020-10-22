@@ -62,7 +62,7 @@ def signupuser(request):
     else:
         form = SignUpForm()
     return render(request, 'app/signupuser.html', {'form':form})
-
+#aa
 
 @login_required(login_url='login')
 def profile(request):
