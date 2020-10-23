@@ -45,10 +45,6 @@ urlpatterns = [
     path('updatepost/<int:dis_id>/', app_views.updatedis, name='updatepost'),
     path('updateprofile/', app_views.update_profile, name='updateprofile'),
     path('search/', app_views.search, name='search'),
-    #heroku
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
-
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
